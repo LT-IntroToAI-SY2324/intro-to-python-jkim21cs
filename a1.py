@@ -127,9 +127,10 @@ def median(lst: List[int]) -> float:
         y = lst[x//2]
         z = lst[ x//2 - 1]
         med = (y+z)//2
-        return med 
+        return med
     else:
         return lst[x//2]
+    
         
         
 
