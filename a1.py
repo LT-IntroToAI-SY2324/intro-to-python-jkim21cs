@@ -14,7 +14,7 @@ check, if you do not complete the generative AI portion of the assignment.
 
 from typing import List, TypeVar
 
-
+# n is the argument that's data type is an integer the [->] means that the function wants to return and int value. 
 def absolute(n: int) -> int:
     """Gives the absolute value of the passed in number. Cannot use the built in
     function `abs`.
@@ -25,8 +25,10 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
-
+    if n >= 0:
+        return n 
+    else:
+       return n*(-1)
 
 def factorial(n: int) -> int:
     """Takes a number n, and computes the factorial n! You can assume the passed in
@@ -38,7 +40,12 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    fact=1
+    inclu = n+1
+    for x in range (1,inclu):
+        fact*=x
+
+    return fact 
 
 
 T = TypeVar("T")
@@ -55,7 +62,18 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+   #review 
+    nLst = []
+    """The range function can be used in several different ways:
+        1. range(stop) --> exludes the stop 
+        2. range (start, stop) --> includes the start, excludes the stop
+        3. raneg(start, stop, step) --> includes the start, excludes the stop, and the step value (how it will iterate through the list)
+    
+    """
+    for x in range (0, len(lst), 2):
+        nLst.append(lst[x])
+    return nLst
+
 
 
 def sum_list(lst: List[int]) -> int:
@@ -68,8 +86,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
-
+    sum = 0
+    for x in range(len(lst)):
+        sum += lst[x]
+    return sum 
 
 def mean(lst: List[int]) -> float:
     """Takes a list of numbers, and returns the mean of the numbers.
@@ -80,7 +100,13 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    mean = 0
+
+    for x in range(len(lst)):
+        mean+=lst[x]
+    mean/=len(lst)
+    return mean 
+   
 
 
 def median(lst: List[int]) -> float:
@@ -95,7 +121,10 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    # x = len(lst)
+    # if x/2==0:
+
+   
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:

@@ -13,38 +13,41 @@ anothernum = 47.7
 print(type(mynum))
 print(type(anothernum))
 
+#can select everything by pressing Ctrl + Shift + Down Arrow
+# Ctrl + / will turn everything selected into comments 
+
 # bools - True, False
 flag = True
 print(flag)
 
-# lists - can hold a list of items of any type
+# # lists - can hold a list of items of any type
 lane_tech = ["chicago", "high school", 1908, 60618, "addison/western"]
-print(lane_tech.reverse())
+#print(lane_tech.reverse())
 print(lane_tech)
 z = lane_tech.pop()
 print(z)
 
 
-# Indices
+ # # Indices
 print(lane_tech[1])
-print(lane_tech[-1])
-print(lane_tech[len(lane_tech)-1])
+print(lane_tech[-1]) #gets the last indexes value
+print(lane_tech[len(lane_tech)-1]) #len(lane_tech)-1 will get length of the array minus 1 t get the last indez 
 
-# Slices
-print(lane_tech[1:3])
-print(lane_tech[:3])
-print(lane_tech[1:])
-print(lane_tech[:])
+# # Slices
+#like a substring for an array
+print(lane_tech[1:3]) #inclusive 1 excluding the third index (will only print the value at index 1 and 2)
+print(lane_tech[:3])#starts from 0
+print(lane_tech[1:])#The entire list --> DOES NOT PRINT THE LAST INDEX VALUE B/C IT IS EXCLUSIVE 
+print(lane_tech[:])#default --> prints entire list 
 
-# Functions
+# # Functions
 
-# defining a function
+# # defining a function
 def hello_world():
     print("hello world")
 
-# calling a function
+# # calling a function
 hello_world()
-
 def add_two(n: int):
     """Takes a number and returns that number + 2
     
@@ -68,7 +71,7 @@ lst = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 for el in lst:
     print(el)
 
-# For Loop Template 2
+# # For Loop Template 2
 # do something n times
 for i in range(5):
     print("Intro to AI")
@@ -80,6 +83,8 @@ for r in range(len(lst)):
         lst[r] = 'c'
 
 print(lst)
+
+
 
 # Dictionaries
 
@@ -93,9 +98,9 @@ food = ['pizza', 'carrots', 'eggs']
 dinner = random.choice(food)
 print(dinner)
 
-# f String
+# f String --> f means format --> formatting a str 
 age = 25
-# print("Mary is " + age + " years old")
-print(f"Mary is {age} years old")
+#print("Mary is " + age + " years old")
+print(f"Mary is {age} years old") #allows you to but your variable directly into the string
 
 
