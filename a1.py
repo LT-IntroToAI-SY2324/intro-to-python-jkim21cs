@@ -100,6 +100,7 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
+    
     mean = 0
 
     for x in range(len(lst)):
@@ -130,12 +131,6 @@ def median(lst: List[int]) -> float:
         return med
     else:
         return lst[x//2]
-    
-        
-        
-
-   
-
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
     """Given an list of names (strings), play 'duck duck goose' with it, knocking out
@@ -156,16 +151,32 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    ppl_left = len(lst)
-    index = 2
+    #my code did not work 
+    # ppl_left = len(lst)
+    # index = 2
 
-    while ppl_left >2:
-        value = lst[index]
-        lst.remove(value)
-        index = (index+2)%ppl_left 
+    # while ppl_left >2:
+    #     value = lst[index]
+    #     lst.remove(value)
+    #     index = (index+2)%ppl_left 
         
-        return lst
+    #     return lst
 
+    i = 0
+    current = "duck1"
+    while len(lst)>2: #keep the loop going until there are only 2 elements
+        if current == "duck1":
+            current ="duck2"
+            i+1 
+        elif current == "duck2":
+            current = "goose"
+            i+=1
+        else: #current == "goose"
+            current = "duck1"
+            lst =lst[:i] + lst[i+1:] #or lst.pop(i)
+        #check to see if we are at the end of the i %= len(lst)
+    
+    return lst
 
 # this line causes the nested code to be skipped if the file is imported instead of run
 if __name__ == "__main__":
